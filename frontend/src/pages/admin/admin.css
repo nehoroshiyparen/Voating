@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.main {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-main {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 50px 0px 50px;
+    height: 100vh;
+}
+
+.ap_title {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.b_row {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-top: 50px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.controll_button {
+    height: 100%;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: #efefef;
+    padding: 10px 30px 10px 30px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.polls_list {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification {
+    position: fixed;
+    background: #62d371;
+    z-index: 100;
+    transform: translateY(-250px);
+    border-radius: 100px;
+    padding: 15px 30px 15px 30px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.notification_inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Noto Sans", system-ui;
+    color: white;
+    font-weight: bold;
+}

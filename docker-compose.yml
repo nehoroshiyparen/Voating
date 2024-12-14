@@ -1,0 +1,56 @@
+name: project_voting_internship
+services:
+
+  voting_service_backend:
+    container_name: voting_service_backend
+    image: voting_service_backend
+    hostname: inside_voting_service_backend
+    restart: always
+    ports:
+      - '5000:5000'
+    depends_on:
+      db:
+        condition: service_healthy
+
+    env_file: .env
+    build:
+      context: .
+      dockerfile: ./Dockerfile_backend
+    volumes:
+      - ./backend:/backend
+
+  voting_service_frontend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile_frontend
+    container_name: voting_service_frontend
+    image: voting_service_frontend
+    hostname: inside_voting_service_frontend
+    env_file: .env
+    ports:
+      - '8100:80'
+    volumes:
+      - ./frontend:/frontend
+
+  db:
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
+    container_name: db_server
+    hostname: dbhost
+    env_file: .env
+    ports:
+      - '3307:3306'
+    volumes:
+      - db:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 1s
+      timeout: 100ms
+      retries: 60
+
+volumes:
+  db:
+    driver: local

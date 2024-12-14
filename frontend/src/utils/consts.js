@@ -1,0 +1,9 @@
+export const ADMIN_ROUTE = "/admin";
+export const LOGIN_ROUTE = "/login";
+export const REGISTRATION_ROUTE = "/registration";
+export const VOTES_ROUTE = "/";
+export const POLL_ROUTE = "/poll";
+export const QUESTION_ROUTE = "/client";
+export const POLL_RESULT_ROUTE = "/results";
+export const POLL_ADMIN_ROUTE = "/polladmin";
+export const QUESTION_CONTROLL_ROUTE = "/questionsController"

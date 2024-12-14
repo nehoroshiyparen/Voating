@@ -1,0 +1,58 @@
+.voteItem {
+	list-style-type: none;
+	padding: 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.voteTitle,
+.voteDescription,
+.voteAuthor,
+.voteStatus {
+	flex: 1;
+	margin-right: 10px;
+	margin-left: 10px;
+	text-align: justify;
+}
+
+.voteAuthor {
+	margin-left: 50px;
+}
+.voteStatus {
+	display: flex;
+	align-items: center;
+	margin-right: 5px;
+}
+
+.voteStatus img {
+	width: 24px;
+	height: auto;
+	margin-right: 5px;
+}
+
+@media (max-width: 800px) {
+	.voteItem {
+		flex-direction: column;
+		padding: 20px;
+	}
+
+	.voteTitle,
+	.voteDescription,
+	.voteAuthor,
+	.voteStatus {
+		margin-right: 5px;
+		margin-left: 5px;
+		text-align: left;
+	}
+
+	.voteAuthor {
+		margin-left: 20px;
+	}
+	.voteStatus {
+		justify-content: center;
+		margin-right: 0;
+	}
+}

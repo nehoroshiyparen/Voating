@@ -1,0 +1,38 @@
+.pollAdmin {
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	margin: 20px auto;
+	padding: 20px;
+	max-width: 600px;
+}
+
+.header {
+	color: #333;
+	text-align: center;
+}
+
+.questionSection {
+	margin-top: 20px;
+}
+
+.questionText {
+	color: #444;
+}
+
+.answersList {
+	list-style: none;
+	padding: 0;
+}
+
+.answerItem {
+	background-color: #eee;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.loading {
+	color: #666;
+	text-align: center;
+}
